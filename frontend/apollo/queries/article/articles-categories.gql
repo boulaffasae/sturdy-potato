@@ -1,0 +1,32 @@
+query Category($id: ID!){
+  category(id: $id) {
+    data {
+      attributes {
+        name
+        articles {
+          id
+          data {
+            attributes {
+              title
+              content
+              image {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+              category {
+                data {
+                  attributes {
+                    name
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
